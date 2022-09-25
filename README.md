@@ -7,3 +7,6 @@ Front-end: HTML, CSS, Javascript
 </br>
 Back-End: Node.js
 
+
+Install the node_modules folder by running the following command: npm install
+
