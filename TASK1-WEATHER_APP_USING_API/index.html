@@ -82,21 +82,17 @@
       }
 
       .date {
-        /* font-size: 15pt; */
         margin: 0;
-        /* margin-top: 0.2em; */
         margin-top: 0.4em;
         position: relative; left: 10px; bottom: 28px;
         margin-bottom: 0.3em;
         text-align: right ;
-        /* font-weight: bold; */
       }
 
       .temp {
         text-align: center;
         font-size: 30pt;
         margin: 0;
-        /* margin-top: 0.3em; */
         position: relative; top: 10px; bottom: 10px;
         margin-bottom: 0.4em;
         font-weight: bold;
@@ -136,33 +132,10 @@
       .wind {
         position: relative; left: 330px; bottom: 50px;
       }
-
-
-
-      /* .weather.loading {
-        visibility: hidden;
-        max-height: 20px;
-        position: relative;
-      }
-
-      .weather.loading::after {
-        visibility: visible;
-        content: "Loading...";
-        color: white;
-        position: absolute;
-        top: 0;
-        left: 20px;
-      } */
-
-
     </style>
   </head>
 
   <body>
-    <!-- <div class="container">
-      <h1>Weather App</h1>
-    </div> -->
-
     <div class="card">
       <div class="search">
         <form action="/" method="post">
@@ -229,12 +202,9 @@
         const now = new Date();
         const year = now.getFullYear();
         dateEl.textContent = new Date().getDate() + ", " + monthNames[new Date().getMonth()]+ " " + year;
-        // console.log(dateEl);
 
         weatherForm.addEventListener("submit", (event) => {
         event.preventDefault();
-        // console.log(search.value);
-        // descriptionEl.textContent = "Loading...";
         tempEl.textContent = "Loading...";
         cityElement.textContent = "";
         flexEl.textContent = "";
@@ -248,8 +218,6 @@
         windEl.textContent = "";
         const locationApi = "https://api.openweathermap.org/data/2.5/weather?appid=d8bae6905e1cc3eaf2624f5498368048&q=" + search.value + "&units=metric";
 
-        // const searchVal = search.value;
-        // console.log(searchVal);
 
         fetch(locationApi).then(response => {
           response.json().then(data => {
@@ -284,21 +252,11 @@
               windEl.textContent = "Wind Speed: "+data.wind.speed+ " "+ "km/h";
 
               imageDesEl.innerText = `${data.weather[0].main}`;
-
-
     
             }
           })
         })
       });
-
-      
-
       </script>
-
-      
-      
-
-    
   </body>
 </html>
