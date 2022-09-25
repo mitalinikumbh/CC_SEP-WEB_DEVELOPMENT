@@ -1,0 +1,19 @@
+{
+  "name": "app_project_weather",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mitali Nikumbh",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "emoji-api": "^2.0.1",
+    "emoji-to-img": "^1.1.0",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19",
+    "requests": "^0.3.0"
+  }
+}
