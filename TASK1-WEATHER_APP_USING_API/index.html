@@ -207,7 +207,6 @@
         event.preventDefault();
         tempEl.textContent = "Loading...";
         cityElement.textContent = "";
-        flexEl.textContent = "";
         dateEl.textContent = "";
         iconEl.textContent = "";
         imageDesEl.textContent = "";
@@ -228,7 +227,6 @@
               iconEl.textContent = "";
               descriptionEl.textContent = "";
               dateEl.textContent = "";
-              flexEl.textContent = "";
               minTempEl.textContent = "";
               maxTempEl.textContent = "";
               imageDesEl.textContent = "";
@@ -250,9 +248,7 @@
               imageDesEl.textContent = data.weather[0].main;
               humidityEl.textContent = "Humidity: "+data.main.humidity +" "+ "%";
               windEl.textContent = "Wind Speed: "+data.wind.speed+ " "+ "km/h";
-
               imageDesEl.innerText = `${data.weather[0].main}`;
-    
             }
           })
         })
